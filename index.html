@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .calculator{
+            margin: auto;
+            margin-top: 30px;
+            border: 2px solid black;
+            width: 200px;
+            height: 295px;
+            border-radius: 5px;
+            background-color: rgba(241, 228, 43, 0.603);
+        }
+        
+        input{
+            width: 45px;
+            margin-left: 14px;
+            background-color: rgba(84, 168, 216, 0.85);
+            color: white;
+            border-radius: 3px;
+        }
+        #screenCSS{
+            background-color: white;
+            margin: 10px 7px;
+            width: 180px;
+            border-radius: 4px;
+            border: 1px solid black;
+            height: 25px;
+            color: black;
+        }
+
+        #clear{
+            margin-left: 35px;
+            width: 130px;
+        }
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+
+        <form name="block">
+
+            <input type="text" name="screen" id="screenCSS">
+            <br><br>
+            <input type="button" value=" 1 " onclick="block.screen.value += '1' ">
+            <input type="button" value=" 2 " onclick="block.screen.value += '2' ">
+            <input type="button" value=" 3 " onclick="block.screen.value += '3' ">
+            <br><br>
+            
+            <input type="button" value=" 4 " onclick="block.screen.value += '4' ">
+            <input type="button" value=" 5 " onclick="block.screen.value += '5' ">
+            <input type="button" value=" 6 " onclick="block.screen.value += '6' ">
+            <br><br>
+            
+            <input type="button" value=" 7 " onclick="block.screen.value += '7' ">
+            <input type="button" value=" 8 " onclick="block.screen.value += '8' ">
+            <input type="button" value=" 9 " onclick="block.screen.value += '9' ">
+            <br><br>
+            
+            <input type="button" value=" + " onclick="block.screen.value += '+' ">
+            <input type="button" value=" 0 " onclick="block.screen.value += '0' ">
+            <input type="button" value=" - " onclick="block.screen.value += '-' ">
+            <br><br>
+            
+            <input type="button" value=" * " onclick="block.screen.value += '*' ">
+            <input type="button" value=" / " onclick="block.screen.value += '/' ">
+            <input type="button" value=" = " onclick="block.screen.value = eval(block.screen.value) ">
+            
+            <br><br>
+            <input type="button" value=" Clear All" id="clear" onclick="block.screen.value = '' ">
+
+        </form>
+
+    </div>
+</body>
+</html>
