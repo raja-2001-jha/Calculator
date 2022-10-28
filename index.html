@@ -12,35 +12,56 @@
 
         <form name="block">
 
-            <input type="text" name="screen" id="screenCSS">
-            <div>
-                <input type="button" value=" 1 " onclick="block.screen.value += '1' ">
-                <input type="button" value=" 2 " onclick="block.screen.value += '2' ">
-                <input type="button" value=" 3 " onclick="block.screen.value += '3' ">
+            <input type="text" name="screen" id="screenCSS">            
+            <div class="main">
+                <div class="first">
+                    <div class="row">
+                        <input type="button" value=" 7 " onclick="block.screen.value += '7' ">
+                        <input type="button" value=" 8 " onclick="block.screen.value += '8' ">
+                        <input type="button" value=" 9 " onclick="block.screen.value += '9' ">
+                        
+                    </div>
+                    <div class="row">
+                        <input type="button" value=" 4 " onclick="block.screen.value += '4' ">
+                        <input type="button" value=" 5 " onclick="block.screen.value += '5' ">
+                        <input type="button" value=" 6 " onclick="block.screen.value += '6' ">
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <input type="button" value=" 1 " onclick="block.screen.value += '1' ">
+                        <input type="button" value=" 2 " onclick="block.screen.value += '2' ">
+                        <input type="button" value=" 3 " onclick="block.screen.value += '3' ">
+        
+                    </div>
+                    <div class="row">
+                        <input type="button" value=" 0 " onclick="block.screen.value += '0' ">
+                        <input type="button" value=" 00 " onclick="block.screen.value += '00' ">
+                        <input type="button" value=" . " onclick="block.screen.value += '.' ">
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="last-row">
+                        <input id="last-row-button" type="button" value=" / " onclick="block.screen.value += '/' ">
+                        <input id="last-row-button" type="button" value=" del " onclick="lastclear()">
+                    </div>
+
+                    <div class="last-row">
+                        <input id="last-row-button" type="button" value=" * " onclick="block.screen.value += '*' ">
+                        <input id="last-row-button" type="button" value=" - " onclick="block.screen.value += '-' ">
+                    </div>
+
+                    <div class="last-row">
+                        <input type="button" value=" + " id="extra" onclick="block.screen.value += '+' ">
+                        <input type="button" value=" = " id="extra" onclick="block.screen.value = eval(block.screen.value) ">
+                    </div>
+                </div>
+
             </div>
             
-            <div>
-                <input type="button" value=" 4 " onclick="block.screen.value += '4' ">
-                <input type="button" value=" 5 " onclick="block.screen.value += '5' ">
-                <input type="button" value=" 6 " onclick="block.screen.value += '6' ">
-            </div>
-            
-            <div>
-                <input type="button" value=" 7 " onclick="block.screen.value += '7' ">
-                <input type="button" value=" 8 " onclick="block.screen.value += '8' ">
-                <input type="button" value=" 9 " onclick="block.screen.value += '9' ">
-            </div>
-            <div>
-                <input type="button" value=" + " onclick="block.screen.value += '+' ">
-                <input type="button" value=" 0 " onclick="block.screen.value += '0' ">
-                <input type="button" value=" - " onclick="block.screen.value += '-' ">
-            </div>
-            
-            <div>
+            <!-- <div>
                 <input type="button" value=" * " onclick="block.screen.value += '*' ">
-                <input type="button" value=" / " onclick="block.screen.value += '/' ">
-                <input type="button" value=" = " onclick="block.screen.value = eval(block.screen.value) ">
-            </div>
+            </div> -->
             <div>
                 <input type="button" value=" Clear All" id="clear" onclick="block.screen.value = '' ">
             </div>
@@ -49,3 +70,22 @@
     </div>
 </body>
 </html>
+
+<script>
+    function lastclear(){
+        var screen=document.getElementById('screenCSS')
+        var screenValue=screen.value
+        
+        var a=""
+        for(i=0;i<screenValue.length-1;i++){
+            a+=screenValue[i];
+        }
+        screen.value=a;
+
+    }
+</script>
+
+
+
+
+
