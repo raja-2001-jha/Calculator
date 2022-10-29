@@ -17,7 +17,7 @@ html{
 }
 
 .calculator{
-    width: 33rem;
+    width: 70rem;
     /* height: 40rem; */
     border: 1px solid black;
     padding: 2rem;
@@ -28,6 +28,22 @@ html{
 .calculator form{
     width: 100%;
     height: 100%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.second{
+    flex-basis: 44%;
 }
 
 .calculator form input[type="text"]{
@@ -51,19 +67,30 @@ html{
 .calculator form div{
     width: 100%;    
     margin-top: 1.5rem;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
 }
 
 .calculator form div input[type="button"]{
-    width: 5.5rem;
+    width: 32%;
     height: 5.5rem;
     font-size: 2.3rem;
     border: none;
-    border-radius: 50%;
+    border-radius: 5%;
     cursor: pointer;
 }
-
+.last-row{
+    display: flex;
+    padding-left: 1.2rem;
+    /* border: 1px solid white; */
+}
+#extra{
+    height:12.5rem;
+    width: 46.5%;
+}
+#last-row-button{
+    width: 46.5%;
+}
 .calculator form div .operator{
     background-color: orange;
 }
@@ -71,6 +98,8 @@ html{
 #clear{
     width: 100%;
     border-radius: .5rem;
+    color:black;
+    border: whitesmoke 1rem  ridge;
     background-color: rgb(190, 190, 190);
 }
 
